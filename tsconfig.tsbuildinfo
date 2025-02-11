@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/routes.ts","./src/controllers/application_controller.ts","./src/controllers/movies_controller.ts","./src/db/mongo_db_server_client.ts","./src/db/movies_model.ts","./src/server/server.ts","./src/types/movie.ts"],"version":"5.7.3"}
