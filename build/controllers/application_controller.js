@@ -1,7 +1,7 @@
 const _invoque_method = async (req, res, callback) => {
-    console.log("REQ", req.body);
+    console.log('REQ', req.body);
     const { response } = await callback(req);
-    console.log("RESPONSE", response);
+    console.log('RESPONSE', response);
     res.json(response);
 };
 const wrapped_method = (callback) => {
@@ -10,7 +10,7 @@ const wrapped_method = (callback) => {
     };
 };
 const cached_method = (method_name, callback, ttl = 60) => {
-    console.log("REGISTERING ", method_name);
+    console.log('REGISTERING ', method_name);
     return async (req, res) => {
         _invoque_method(req, res, callback);
     };
