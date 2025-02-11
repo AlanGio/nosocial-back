@@ -1,20 +1,17 @@
-import express from "express";
+import express from 'express';
 const router = express.Router();
 
-import bodyParser from "body-parser";
+import bodyParser from 'body-parser';
 var jsonParser = bodyParser.json();
 
-import movies_controller from "../controllers/movies_controller.js";
+import posts_controller from '../controllers/posts_controller.js';
 
 router.post(
-  "/movies",
+  '/posts',
   jsonParser,
-  movies_controller.wrapped_method(movies_controller.post)
+  posts_controller.wrapped_method(posts_controller.post)
 );
 
-router.get(
-  "/movies",
-  movies_controller.wrapped_method(movies_controller.index)
-);
+router.get('/posts', posts_controller.wrapped_method(posts_controller.index));
 
 export default router;
